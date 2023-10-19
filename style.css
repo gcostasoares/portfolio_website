@@ -595,9 +595,9 @@
     font-size: 18px;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-content: flex-start;
     align-items: flex-start;
-    justify-content: center;
+    justify-content:flex-start;
     z-index: 6;
     top: 0;
   }
@@ -734,7 +734,7 @@
    
     margin-top: 230px;
     margin-bottom: 90px;
-    height: 80vh;
+    height: 40vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -744,7 +744,7 @@
   
   @media (max-width: 1100px) {
     .invitation{
-      height: 90vh;
+      height: 80vw;
       margin-top: 40px;
       margin-bottom: 40px;
     }
@@ -903,7 +903,7 @@
   .form-control input::placeholder {
     font-family: var(--roboto);
     color: rgb(142, 140, 140);
-    padding-left: 40px;
+    padding-left: 5px;
   
   }
   
@@ -980,7 +980,7 @@
   
   .message textarea {
     padding-top: 20px;
-    padding-left: 20px;
+    padding-left: 5px;
     border-bottom: 1px solid black;
     height: 200px;
     font-size: 16px;
