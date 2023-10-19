@@ -761,7 +761,7 @@
     .invitation{
       height: 65vw;
       margin-top: 50px;
-      margin-bottom: 20px;
+      margin-bottom: 0px;
     }
   }
   @media (max-width: 800px){
@@ -862,6 +862,11 @@
     margin-bottom: 200px;
   }
   
+  @media (max-width: 1300px) {
+    .kontakt {
+      margin-top: -50px;
+    }
+  }
   
   .hallo h1 {
     font-size: clamp(40px, 4vw, 75px);
