@@ -1,988 +1,230 @@
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    text-decoration: none;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Roboto&display=swap" rel="stylesheet">
   
-  /* Global variables */
-  :root {
-    --kindagreen: #0A090C;
-    --kindagrey: #0A090C;
-    --kindagreylight: #dad8d8;
-    --kindawhite: #FFFDFD;
-    --kindayellow: #90DDF0;
-    --kindaorange: #07393C;
-    --gradient: 100% 100% 0 0 linear-gradient(90deg, #71B1FFFF 0%, #F8E9E9FF 99%);
-    --roboto: 'Roboto', sans-serif;
-    --prata: 'Prata', serif;
-  }
-  /* Add this to your CSS file */
-  body {
-    transition: background-color 0.5s ease;
-  }
-  
-  .btn {
-    display: none;
-  }
-  
-  @media (max-width: 800px) {
-    .btn {
+  <body>
+    
+    <!---Menu--->
+
+    <section class="menu" id="menu">
+      <div class="navbar">
+        <ul>
+          <li><a href="#logo" class="logo">Gabriel Costa Soares</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#aboutme">Über Gabriel</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="burger_menu" id="burger_menu">
+      <div class="btn">
+        <div class="btn_burger"></div>
+      </div>
+    </section>
+
+    <section class="background_burger">
+      <div class="new_menu" id="new_menu">
+      </div>
+    </section>
+
+    <section>
+      <div class="menu_items_burger" id="menu_items">
+        <ul id = "items">
+          <li><a href="#logo">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#aboutme">Über Gabriel</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="home" id="logo">
+
+      <div class="frontpage" id="frontpage">
+
+          <div class="front">
+            <p class = 'gabriel' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Gabriel</p>
+            <p class = 'costasoares' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Costa</p>
+            <p class = 'costasoares' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Soares</p>
+          </div>
+
+          <div class="rotating_text">
+              <div class="content">
+                <svg viewBox="0 0 500 500">  
+                <defs>
+                <path id="textcircle" d="M250,400
+                             a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" transform="rotate(1,150,250)" />
+                </defs>
+                <g class="textcircle">
+                <text textLength="0">
+                  <textPath 
+                            xlink:href="#textcircle" 
+                            textLength="940">
+                            &nbspwebentwicklung || webdesign || fotografie ||
+                  </textPath>
+                  </text>
+                  </g>
+                  </svg>
+              </div>
+          </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="aboutme" id="aboutme">
+    
+      <div class="aboutme_container">
+        <div class="about_gabriel">
+          <div class="head_title">
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">about</h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">gabriel</h1>
+            <div class="line" data-aos="fade-left" data-aos-duration="1000"></div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="photo_container">
+        <div class="photo">
+          <img src="eu.jpg" alt="">
+        </div>
+
+
+        <div class="photo_title">
+          <h1>Frontend Entwickler</h1>
+          <h1>& Fotograf</h1>
+        </div>
+
+    </div>
+   
+     
+    <div class="text_aboutme">
+      <div class="paragraph1">
+        <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Moin moin!</p>
+      </div>
+      <div class="paragraph2">
+        <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Ich bin Gabriel!</p>
+      </div>
+      <div class="paragraph3">
+        <p></p>
+        <p></p>
+        <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">Als Webentwickler habe ich meine Leidenschaft zum Beruf gemacht und widme mich mit großer Präzision der Entwicklung eleganter und benutzerfreundlicher Websites und Webanwendungen. Mein Schwerpunkt liegt auf der Implementierung maßgeschneiderter Lösungen, die die spezifischen Anforderungen und Zielsetzungen meiner Kunden akkurat abbilden.</p>
+        <p></p>
+       
+      </div>
+    </div>
+    
+    <div class="photo_aftertext">
+      <div class="photoblock">
+        <div class="eu">
+          <img src="eu.jpg" alt="">
+        </div>
+        <div class="landscape">
+        <img src="53f34748e0955195e41dae8b4b0e8143.jpg" alt="">
+        </div>
+    </div>
+    </div>
+
+  </section>
+
+
+
+    <section class="portfolio" id="portfolio">
+
+      <ul class="work_list">
+        <li class="project">
+          <div class="website"></div>
+          <h2>Projekt 1</h2>
+        </li>
+        <li class="project">
+          <div class="website"></div>
+          <h2>Projekt 2</h2>
+        </li>
+        <li class="project">
+          <div class="website"></div>
+          <div class="end_project">
+          <h2>Projekt 3</h2>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+
+
+  <section class="form" id="form">
+
+    <div class="invitation">
+      <div class="perspective-text">
+        <div class="perspective-line">
+          <p></p>
+          <p>Let's</p>
+        </div>
+        <div class="perspective-line">
+          <p>Let's</p>
+          <p>Work</p>
+        </div>
+        <div class="perspective-line">
+          <p>Work</p>
+          <p class="together">&nbsp&nbspTogether</p>
+        </div>
+        <div class="perspective-line">
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+        
+    <form class="kontakt" id="kontakt">
+
+      <div class="hallo">
+        <h1>¡HOLA!</h1>
+      </div>  
+
+      <div class="form-control">  
+          <label id="username_label" for="username">ICH HEIßE</label>
+          <input type="text" placeholder="dein Name" id="username">
+          <small>Error message</small>
+      </div>
+
+      <div class="form-control">
+          <label id="email_label"  for="username">MEINE EMAIL</label>
+          <input type="email" placeholder="deine Emailadresse" id="email">
+          <small>Error message</small>
+      </div>
+
+      <div class="message">
+          <label>DAS IST MEINE NACHRICHT</label>
+          <textarea type="text" placeholder= "deine Nachricht"></textarea>
+      </div>
       
-      transform: scale(0.6);
-      position: fixed;
-      display: flex;
-      justify-content: flex-end;
-      width: 100%;
-      padding-right: 10%;
-      align-items: center;
-      height: 80px;
-      cursor: pointer;
-      transition: all .5s ease-in-out;
-      z-index: 30000;
-      /* border: 3px solid #fff; */
-    }
-  }
-  .btn_burger {
-    width: 50px;
-    height: 6px;
-    background: var(--kindaorange);
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
-  }
-  .btn_burger::before,
-  .btn_burger::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 6px;
-    background: var(--kindaorange);
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
-  }
-  .btn_burger::before {
-    transform: translateY(-16px);
-  }
-  .btn_burger::after {
-    transform: translateY(16px);
-  }
-  /* ANIMATION */
-  .btn.open {
-    transform: translateX(-170px);
-  }
-  @media (max-width: 700px) {
-    .btn.open {
-      transform: translateX(-100px);
-    }
-  }
-  .btn.open .btn_burger {
-    background: transparent;
-  }
-  
-  .btn.open .btn_burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-  
-  }
-  .btn.open .btn_burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-  
-  }
-  @media (max-width: 800px) {
-    .navbar{
-      display: none;
-    }
-  }
-  
-  .new_menu {
-    
-    background-color: var(--kindagreen);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translateX(100%);
-    transition: transform 0.5s;
-    z-index: 2000;
-  
-  
-  }
-  .menu_items_burger {
-    display: flex;
-    position: fixed;
-    z-index: 3000;
-    transition: opacity 0.6s;
-  }
-  .menu_items_burger ul{
-   
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    font-size: clamp(50px, 4vw, 100px);
-    gap: 90px;
-    font-family: var(--roboto);
-    text-decoration: none;
-    text-transform: lowercase;
-  }
-  
-  .menu_items_burger ul a {
-    text-decoration: none;
-    color: var(--kindagrey)
-  }
-  
-  
-  
-  
-  
-  /* Menu bar styles */
-  .menu {
-    background-color: transparent;
-  }
-  .navbar {
-    background-color: transparent;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    margin-left: 0%;
-    z-index: 5000;
-    overflow-y: hidden;
-    transition: all .5s ease-in-out;
-    
-  }
-  
-  .navbar ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    gap: 0;
-    font-size: clamp(15px, 2vw, 30px);
-  }
-  
-  
-  .navbar ul li {
-    margin-top: 10px;
-    margin-right: 50px;
-  }
-  
-  .navbar ul li a {
-    font-family: var(--roboto);
-    
-    font-weight: 200;
-    color: var(--kindagreen);
-    letter-spacing: 0.2vw;
-    text-transform: lowercase;
-    text-decoration: none;
-    line-height: 5vw;
-    margin: 0;
-    
-  }
-  
-  .navbar ul li a:hover {
-    color: var(--kindaorange);
-  }
-  
-  .navbar .logo {
-    font-family: var(--roboto);
-      opacity: 0;
-      color: #F7B32B;
-      transition: opacity .5s ease-in-out;
-      text-transform: uppercase;
-   }
-  
-  
-  /* Frontpage styles */
-  .frontpage {
-    
-    overflow: hidden;
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-wrap: nowrap;
-  }
-  
-  .front {
-    overflow: hidden;
-    color: var(--kindaorange);
-    font-family: var(--prata);
-    font-size: 90px;
-    font-weight: 900;
-    letter-spacing: 0.5vw;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-   
-    
-  }
-  
-  .front p {
-    overflow: hidden;
-    
-  }
-  
-  /* Responsive styles for frontpage */
-  @media (max-width: 1100px) {
-    .frontpage {
-      overflow-y: hidden;
-      flex-direction: column;
-      height: 150vh;
-      padding-top: 100px;
-      
-    }
-  
-    .front {
-      margin-left: 0px;
-      margin-bottom: 50px;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-    
-    .front p {
-      height: 650px;
-    }
-    .rotating_text {
-      
-      width: 100%;
-      max-width: 300px;
-      padding-bottom: 240px;
-      transform: scale(1.3);
-    }
-  }
-  
-  .rotating_text {
-    width: 30rem;
-    min-width: 100px;
-    z-index: 3;
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
-  
-  /* Text styles for rotating text */
-  text {
-    fill: var(--kindagreen);
-    font-family: var(--roboto);
-    font-size: 22px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-variant-ligatures: none;
-    letter-spacing: 6px;
-    transform-origin: 250px 250px;
-  }
-  
-  /* Add animation properties with vendor prefixes */
-  @supports (animation: rotate 1s) {
-    /* Modern browsers */
-    text {
-      animation: rotate 25s linear infinite;
-    }
-  }
-  
-  /* Responsive styles for smaller screens */
-  @media (max-width: 675px) {
-    .frontpage {
-      height: auto;
-      margin-top: 100px;
-    }
-  
-    .front {
-      margin-left: 0;
-      margin-bottom: 0px;
-      font-size: clamp(50px, 4vw, 60px);
-      text-align: center;
-    }
-    .front p {
-      height: auto;
-    }
-  
-    .rotating_text {
-      width: 100%;
-      max-width: 300px;
-      padding-bottom: 0;
-    }
-  }
-  
-  /* Keyframe animation with vendor prefixes */
-  @keyframes rotate {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /* Vendor prefixes for keyframe animation */
-  @-webkit-keyframes rotate {
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  
-  @-moz-keyframes rotate {
-    to {
-      -moz-transform: rotate(360deg);
-    }
-  }
-  
-  @-o-keyframes rotate {
-    to {
-      -o-transform: rotate(360deg);
-    }
-  }
-  
-  
-  /* Textcircle styles */
-  .textcircle {
-    transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
-    transform-origin: 250px 250px;
-  }
-  
-  /* Portfolio styles */
-  .portfolio {
-    overflow: hidden;
-  }
-  
-  .project {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  
-  .project h2 {
-    color: black;
-    margin-bottom: 5rem;
-    font-family: var(--roboto);
-    font-size: 3rem;
-  }
-  
-  .website {
-    width: 80%;
-    max-width: 55rem;
-    aspect-ratio: 16/9;
-    background-color: var(--kindagrey);
-    transition: .3s ease;
-  }
-  
-  .end_project h2 {
-    margin-bottom: 2px;
-  }
-  
-  /* About me styles */
-  .aboutme {
-   
-    transition: background-color 0.5s ease;
-    color: var(--kindawhite);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  
-  
-  .aboutme_container {
-  
-    height: 50vw;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .about_gabriel {
-  
-    width: 50vw;
-    
-    max-width: 105vh;
-    height: 50vw;
-    position: absolute;
-    overflow: hidden;
-    transform: rotate(-90deg);
-  }
-  
-  .head_title {
-    overflow: hidden;
-   
-    position: absolute;
-    font-size: 3vw; /* Use vw for text size for scalability */
-    width: 100%; /* Make the text container 100% width */
-   
-    height: 100%; /* Make the text container 100% height */
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items:start; /* Center text vertically */
-    margin-top: 10vw;
-  }
-  
-  
-  .head_title h1 {
-    color: var(--kindaorange);
-    font-family: var(--roboto);
-    text-align: start;
-  }
-  
-  .line {
-    margin-top: 3%; /* Set margin to create spacing between text and line */
-    border: 4px solid var(--kindaorange); /* Use vw for line thickness for scalability */
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    width: 100%; /* Make the line 100% width */
-  }
-  
-  /* Media Queries - Increase font-size by 1vw for every 100px reduction */
-  @media (max-width: 1200px) {
-    .head_title {
-      font-size: calc(3vw + 1vw);
-    }
-    .aboutme_container {
-      height: 70vw;
-    }
-    .about_gabriel {
-      width: 70vw;
-      height: 70vw;
-    }
-  }
-  
-  @media (max-width: 1100px) {
-    .head_title {
-      font-size: calc(4vw + 1vw);
-    }
-    .aboutme_container {
-      height: 75vw;
-    }
-    .about_gabriel {
-      width: 75vw;
-      height: 75vw;
-    }
-  }
-  
-  @media (max-width: 1000px) {
-    .head_title {
-      font-size: calc(5vw + 1vw);
-    }
-    .aboutme_container {
-      height: 80vw;
-    }
-    .about_gabriel {
-      width: 80vw;
-      height: 80vw;
-    }
-  }
-  
-  @media (max-width: 900px) {
-    .head_title {
-      font-size: calc(6vw + 1vw);
-    }
-    .aboutme_container {
-      height: 85vw;
-    }
-    .about_gabriel {
-      width: 85vw;
-      height: 85vw;
-    }
-  }
-  
-  @media (max-width: 800px) {
-    .head_title {
-      font-size: calc(7vw + 1vw);
-    }
-    .aboutme_container {
-      height: 90vw;
-    }
-    .about_gabriel {
-      width: 90vw;
-      height: 90vw;
-    }
-  }
-  
-  @media (max-width: 700px) {
-    .head_title {
-      font-size: calc(8vw + 1vw);
-    }
-    .aboutme_container {
-      height: 95vw;
-    }
-    .about_gabriel {
-      width: 95vw;
-      height: 95vw;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .head_title {
-      font-size: calc(9vw + 1vw);
-    }
-    .aboutme_container {
-      height: 100vw;
-    }
-    .about_gabriel {
-      width: 100vw;
-      height: 100vw;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .head_title {
-      font-size: calc(10vw + 1vw);
-    }
-    .aboutme_container {
-      height: 105vw;
-    }
-    .about_gabriel {
-      width: 105vw;
-      height: 105vw;
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .head_title {
-      font-size: calc(11vw + 1vw);
-    }
-    .aboutme_container {
-      height: 110vw;
-    }
-    .about_gabriel {
-      width: 110vw;
-      height: 110vw;
-    }
-  }
-  
-  @media (max-width: 300px) {
-    .head_title {
-      font-size: calc(12vw + 1vw);
-    }
-    .aboutme_container {
-      height: 115vw;
-    }
-    .about_gabriel {
-      width: 115vw;
-      height: 115vw;
-    }
-  }
-  
-  .photo_container {
-    display: flex;
-    justify-content:center;
-    align-items:flex-start;
-    margin-top: 100px;
-    gap: 4rem;
-    overflow: hidden;
-  
-  }
-  .photo_title {
-   
-    color: var(--kindagrey);
-    font-family: var(--roboto);
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: flex-start;
-    justify-content: center;
-    z-index: 6;
-    top: 0;
-  }
-  
-  .photo {
-    z-index: 6;
-    top: 0;
-  }
-  
-  .photo img {
-    aspect-ratio: 5/7.4;
-    height: 420px;
-  }
-  @media (max-width:700px){
-    .photo_container{
-      flex-direction: column-reverse;
-      gap: 0;
-      position: relative;
-      margin-top: 100px;
-    }
-    .photo_title{
-      position: absolute;
-      font-size: 5vw;
-      z-index: 7;
-      top: 0;
-      left: 30%;
-      align-items: flex-end;
-    }
-    .photo{
-      padding-top: 100px;
-      margin-left: 10%;
-    }
-    .photo img{
-      height: 80vw;
-    }
-  }
-  
-  .text_aboutme {
-   
-    margin-top: 100px;
-    color: var(--kindaorange);
-    font-family: var(--roboto);
-    font-size: clamp(20px, 4vw, 40px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    text-align: center;
-    margin-left: 60px;
-    margin-right: 60px;
-    overflow: hidden;
-  }
-  
-  .paragraph3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow: hidden;
-    line-height: 60px;
-  }
- 
-  
-  .paragraph1,
-  .paragraph2,
-  .paragraph3 p{
-    margin-bottom: 50px;
-    overflow-y: hidden;
-  }
-  
-  
-  @media screen and (max-width: 500px) {
-    /* Dieser CSS-Code ändert die Breite des Absatzes, wenn der Screen size verkleinert wird */
-    .paragraph3 {
-      width: 100%;
-    }
-  }
-  .photo_aftertext{
-  
-    height: 110vh;
-    overflow: hidden;
-  }
-  .photoblock {
-    position: relative;
-    left:25%;
-    
-    height: 45vw; /* Adjust as needed */
-    aspect-ratio: 1/1; /* Take full width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    margin-top: 100px;
-  }
-  @media (max-width: 1150px) {
-    .photoblock{
-      transform: scale(1.5);
-      margin-top: 200px;
-    }
-  }
-  
-  @media (max-width: 750px) {
-    .photo_aftertext{
-      height: 90vh;
-    }
-    .photoblock{
-      transform: scale(2);
-      margin-top: 150px;
-    }
-  }
-  
-  .eu img {
-    width: 20vw;
-    position: absolute;
-    
-    transform: translate(-90%, -60%); /* Center vertically */
-    aspect-ratio: 5/7.4;
-  }
-  
-  .landscape img {
-    width: 20vw;
-    position: absolute;
-    top: 50%; /* Adjust vertical position as needed */
-    
-    transform: translate(-10%, -40%); /* Center vertically */
-    aspect-ratio: 5/7.4;
-  }
-  
-  .invitation {
-    margin-top: 230px;
-    margin-bottom: 90px;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  @media (max-width: 1100px) {
-    .invitation{
-      height: 52vh;
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-  }
-  .perspective-text {
-    color:  var(--kindayellow);
-    font-size: 45px;
-    font-weight: 900;
-    letter-spacing: -2px;
-    text-transform: uppercase;
-    height: 50vh;
-    width: 700px;
-    overflow: hidden;
-    font-family: var(--prata);
-    transform: scale(2);
-    position: absolute;
-    top:0;
-    padding-top: 20px;
-  }
-  @media (max-width: 1100px) {
-    .perspective-text{
-      margin-top: 50px;
-      margin-bottom: 50px;
-      padding-top: 0;
-      transform: scale(1.6);
-    }
-  }
-  @media (max-width: 550px){
-    .perspective-text{
-      transform: scale(1);
-    }
-  }
-  .perspective-line {
-    margin-left: 150px;
-    height: 50px;
-    width: 500px;
-    overflow: hidden;
-    position: relative;
-  }
-  .perspective-line p {
-    overflow: hidden;
-    margin: 0;
-    height: 50px;
-    line-height: 50px;
-    transition: all 0.7s ease-in-out;
-    
-  }
-  
-  .perspective-line:nth-child(odd) {
-    transform: skew(60deg, -30deg) scaleY(0.667);
-  }
-  .perspective-line:nth-child(even) {
-    transform: skew(0deg, -30deg) scaleY(1.333);
-  }
-  
-  .perspective-line {
-    position: relative;
-  }
-  
-  .perspective-line:nth-child(1) {
-    left: 29px;
-  }
-  .perspective-line:nth-child(2) {
-    left: 58px;
-  }
-  .perspective-line:nth-child(3) {
-    left: 87px;
-  }
-  .perspective-line:nth-child(4) {
-    left: 116px;
-  }
-  .perspective-line:nth-child(5) {
-    left: 145px;
-  }
-  
-  .together {
-    color: #EB4511;
-  }
-  
-  .perspective-text.animate p{
-    transform: translate(0, -50px);
-  }
-  
-  
-  
-  .kontakt {
-    position: relative;
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 60px;
-    font-family: var(--roboto);
-    color: #3d3d3d;
-    font-size: clamp(20px, 4vw, 40px);
-    margin-bottom: 200px;
-  }
-  
-  
-  .hallo h1 {
-    font-size: clamp(40px, 4vw, 75px);
-    font-style: italic;
-    font-family: var(--prata);
-    
-  }
-  .form-control {
-    display: flex;
-    align-items:flex-start;
-    
-    justify-content: start;
-    flex-direction: column;
-    
-    
-  }
-  
-  
-  .form-control label {
-  
-    white-space: nowrap;
-    position: static;
-    font-size: clamp(35px, 4vw, 60px);
-    padding-right: 150px;
-    
-  }
-  
-  @media (max-width: 350px) {
-    .hallo h1{
-      font-size: 30px;
-    }
-    .form-control label {
-      font-size: 30px;
-    }
-  }
-  #username_label{
-    margin-right: -58px;
-  }
-  
-  .form-control input {
-    
-    height: 50px;
-    padding-top: 20px;
-    
-    width: 70%;
-    border-bottom: 1x solid #3d3d3d;
-    font-size: clamp(6px, 4vw, 16px);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    outline: none;
-  }
-  @media (max-width: 350px) {
-    .form-control input {
-     width: auto;
-    }
-  }
-  
-  .form-control input::placeholder {
-    font-family: var(--roboto);
-    color: rgb(142, 140, 140);
-    padding-left: 40px;
-  
-  }
-  
-  
-  .form-control.success input {
-    border-color: #2ecc71;
-  }
-  
-  .form-control.error input {
-    border-color: #e74c3c;
-  }
-  
-  
-  .form-control small {
-  
-    display: flex;
-    justify-content: center;
-    color: #e74c3c;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
-  }
-  
-  .form-control.error small {
-    visibility: visible;
-  }
-  
-  .sender {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px;
-    margin-left: 20%;
-  }
-  .sender button {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border: none;
-    background-color:var(--kindaorange);
-    text-align: center;
-    transition: .3s ease;
-    font-size: 20px;
-    color: white;
-  }
-  
-  .form button:hover {
-    transform: scale(0.9);
-  }
-  
-  .message {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-   
-  
-  }
-  
-  .message label {
-    font-size: clamp(40px, 4vw, 75px);
-  }
-  @media (max-width: 350px) {
-    .message label {
-      font-size: 30px;
-    }
-    .sender button{
-      transform: scale(0.7);
-    }
-    .form button:hover {
-      transform: scale(0.7)
-    }
-  }
-  
-  .message textarea {
-    padding-top: 20px;
-    padding-left: 20px;
-    border-bottom: 1px solid black;
-    height: 200px;
-    font-size: 16px;
-    background: none;
-    outline: none;
-  }
-  
-  .message textarea::placeholder {
-    font-family: var(--roboto);
-    color: rgb(142, 140, 140);
-  }
-  
+        
+      <div class="sender">
+        <button type="submit">senden</button>
+      </div>
+
+    </form>
+
+  </section>
+
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
+  </body>
+
+
+  </html>
+
