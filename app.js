@@ -159,15 +159,7 @@ window.addEventListener("scroll", () => {
     }
   }
 
-  if (scrollPosition === 0) {
-    changeBackgroundColor("var(--gradient)");
-  } else if (scrollPosition > 0 && scrollPosition < portfolioSectionTop) {
-    changeBackgroundColor("var(--kindagrey)");
-  } else if (scrollPosition >= portfolioSectionTop && scrollPosition < formSectionTop) {
-    changeBackgroundColor("var(--kindagreen)");
-  } else if (scrollPosition >= formSectionTop) {
-    changeBackgroundColor("var(--kindawhite");
-  }
+ 
 });
 
 var logoElementsOnLoad = document.getElementsByClassName("logo");
