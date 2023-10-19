@@ -869,7 +869,7 @@
   }
   @media (max-width: 900px) {
     .kontakt {
-      margin-top: 100px;
+      margin-top: 0;
     }
   }
   
