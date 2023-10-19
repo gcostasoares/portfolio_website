@@ -28,7 +28,7 @@
     display: none;
   }
   
-  @media (max-width: 800px) {
+  @media (max-width: 1300px) {
     .btn {
       
       transform: scale(0.6);
@@ -89,7 +89,7 @@
     transform: rotate(-45deg) translate(35px, 35px);
   
   }
-  @media (max-width: 800px) {
+  @media (max-width: 1300px) {
     .navbar{
       display: none;
     }
@@ -233,7 +233,7 @@
   }
   
   /* Responsive styles for frontpage */
-  @media (max-width: 1100px) {
+  @media (max-width: 1300px) {
     .frontpage {
       
       overflow-y: hidden;
@@ -254,6 +254,7 @@
     }
     
     .front p {
+      font-size: 110px;
       height: 650px;
       
     }
@@ -274,6 +275,13 @@
     overflow-x: hidden;
   }
   
+  @media (max-width: 800px) {
+    
+    .front p {
+      font-size: 90px;
+      
+    }
+  }
   /* Text styles for rotating text */
   text {
     fill: var(--kindagreen);
@@ -449,7 +457,7 @@
   }
   
   /* Media Queries - Increase font-size by 1vw for every 100px reduction */
-  @media (max-width: 1200px) {
+  @media (max-width: 1300px) {
     .head_title {
       font-size: calc(3vw + 1vw);
     }
@@ -734,7 +742,7 @@
   
   .invitation {
    
-    margin-top: 230px;
+    margin-top: 130px;
     margin-bottom: 90px;
     height: 40vw;
     display: flex;
@@ -744,10 +752,10 @@
     overflow: hidden;
   }
   
-  @media (max-width: 1100px) {
+  @media (max-width: 1300px) {
     .invitation{
       height: 65vw;
-      margin-top: 40px;
+      margin-top: 10px;
       margin-bottom: 40px;
     }
   }
@@ -771,7 +779,7 @@
     top:0;
     padding-top: 20px;
   }
-  @media (max-width: 1100px) {
+  @media (max-width: 1300px) {
     .perspective-text{
       margin-top: 50px;
       margin-bottom: 100px;
@@ -841,8 +849,8 @@
   .kontakt {
     position: relative;
     width: 100%;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-family: var(--roboto);
     color: #3d3d3d;
     font-size: clamp(20px, 4vw, 40px);
