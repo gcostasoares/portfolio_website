@@ -9,12 +9,12 @@
   
   /* Global variables */
   :root {
-    --kindagreen: #00DEA3;
-    --kindagrey: #4F4538;
+    --kindagreen: #0A090C;
+    --kindagrey: #0A090C;
     --kindagreylight: #dad8d8;
     --kindawhite: #FFFDFD;
-    --kindayellow: #F7B32B;
-    --kindaorange: #EB4511;
+    --kindayellow: #90DDF0;
+    --kindaorange: #07393C;
     --gradient: 100% 100% 0 0 linear-gradient(90deg, #71B1FFFF 0%, #F8E9E9FF 99%);
     --roboto: 'Roboto', sans-serif;
     --prata: 'Prata', serif;
@@ -237,7 +237,7 @@
     .frontpage {
       overflow-y: hidden;
       flex-direction: column;
-      height: 110vh;
+      height: 150vh;
       padding-top: 100px;
       
     }
@@ -279,8 +279,15 @@
     text-transform: uppercase;
     font-variant-ligatures: none;
     letter-spacing: 6px;
-    animation: rotate 25s linear infinite;
     transform-origin: 250px 250px;
+  }
+  
+  /* Add animation properties with vendor prefixes */
+  @supports (animation: rotate 1s) {
+    /* Modern browsers */
+    text {
+      animation: rotate 25s linear infinite;
+    }
   }
   
   /* Responsive styles for smaller screens */
@@ -288,7 +295,6 @@
     .frontpage {
       height: auto;
       margin-top: 100px;
-    
     }
   
     .front {
@@ -297,7 +303,7 @@
       font-size: clamp(50px, 4vw, 60px);
       text-align: center;
     }
-    .front p{
+    .front p {
       height: auto;
     }
   
@@ -308,12 +314,32 @@
     }
   }
   
-  /* Keyframe animation */
+  /* Keyframe animation with vendor prefixes */
   @keyframes rotate {
     to {
       transform: rotate(360deg);
     }
   }
+  
+  /* Vendor prefixes for keyframe animation */
+  @-webkit-keyframes rotate {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @-moz-keyframes rotate {
+    to {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  
+  @-o-keyframes rotate {
+    to {
+      -o-transform: rotate(360deg);
+    }
+  }
+  
   
   /* Textcircle styles */
   .textcircle {
@@ -618,6 +644,7 @@
     text-align: center;
     margin-left: 60px;
     margin-right: 60px;
+    overflow: hidden;
   }
   
   .paragraph3 {
@@ -627,11 +654,16 @@
     justify-content: center;
     white-space: pre-wrap;
     word-wrap: break-word;
+    overflow: hidden;
+    line-height: 60px;
   }
+ 
   
   .paragraph1,
-  .paragraph2 {
+  .paragraph2,
+  .paragraph3 p{
     margin-bottom: 50px;
+    overflow-y: hidden;
   }
   
   
@@ -728,6 +760,8 @@
   }
   @media (max-width: 1100px) {
     .perspective-text{
+      margin-top: 50px;
+      margin-bottom: 50px;
       padding-top: 0;
       transform: scale(1.6);
     }
@@ -844,7 +878,7 @@
     
     height: 50px;
     padding-top: 20px;
-    margin-left: -20px;
+    
     width: 70%;
     border-bottom: 1x solid #3d3d3d;
     font-size: clamp(6px, 4vw, 16px);
