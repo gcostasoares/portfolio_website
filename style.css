@@ -410,7 +410,7 @@
   }
   @media (max-width: 1000px) {
     .project h2 {
-      font-size: clamp(50px, 4vw, 60px);
+      font-size: 7vw;
     }
   }
   
