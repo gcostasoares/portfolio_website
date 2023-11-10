@@ -176,7 +176,7 @@ function sendEmail(event) {
   var message = document.querySelector('.message textarea').value;
 
   // Use the EmailJS API to send the email
-  emailjs.send("service_8ydndpo", "your_template_template_kwpvdnm", {
+  emailjs.send("service_8ydndpo", "template_kwpvdnm", {
     to_name: name,
     from_email: email,
     message_html: message
