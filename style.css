@@ -9,12 +9,12 @@
   
   /* Global variables */
   :root {
-    --kindagreen: #0A090C;
-    --kindagrey: #0A090C;
+    --kindagreen: #373737;
+    --kindagrey: #373737;
     --kindagreylight: #dad8d8;
     --kindawhite: #FFFDFD;
     --kindayellow: #90DDF0;
-    --kindaorange: #07393C;
+    --kindaorange: #373737;
     --gradient: 100% 100% 0 0 linear-gradient(90deg, #71B1FFFF 0%, #F8E9E9FF 99%);
     --roboto: 'Roboto', sans-serif;
     --prata: 'Prata', serif;
@@ -36,7 +36,7 @@
       display: flex;
       justify-content: flex-end;
       width: 100%;
-      padding-right: 10%;
+     
       align-items: center;
       height: 80px;
       cursor: pointer;
@@ -186,13 +186,15 @@
   }
   
   .navbar ul li a:hover {
-    color: var(--kindaorange);
+    color: rgba(12,189,241,1);
   }
   
   .navbar .logo {
     font-family: var(--roboto);
       opacity: 0;
-      color: #F7B32B;
+      background: linear-gradient(202deg, rgba(247,104,109,1) 0%, rgba(12,189,241,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       transition: opacity .5s ease-in-out;
       text-transform: uppercase;
    }
@@ -213,9 +215,10 @@
   
   .front {
     overflow: hidden;
-    color: var(--kindaorange);
-    font-family: var(--prata);
-    font-size: 90px;
+    position: relative;
+    color: transparent; /* Make the text transparent */
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 120px;
     font-weight: 900;
     letter-spacing: 0.5vw;
     text-transform: uppercase;
@@ -223,9 +226,23 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-   
-    
-  }
+}
+
+.front::before {
+    content: "Gabriel Costa Soares"; /* Insert your text here */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(247,104,109);
+    background: linear-gradient(202deg, rgba(247,104,109,1) 0%, rgba(12,189,241,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+
   
   .front p {
     overflow: hidden;
@@ -238,23 +255,30 @@
       
       overflow-y: hidden;
       flex-direction: column;
+      align-items: center;
       height: 120vh;
       padding-top: 100px;
+      width: auto;
       
     }
   
     .front {
       
+      width: 50vw;
       margin-left: 0px;
-      margin-bottom: 50px;
+      padding-bottom: 50px;
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      text-align: center;
+      font-size: 110px;
       
     }
     
     .front p {
-      font-size: 110px;
+      
+  
+    
       height: 650px;
       
     }
@@ -377,15 +401,40 @@
   .project h2 {
     color: black;
     margin-bottom: 5rem;
-    font-family: var(--roboto);
-    font-size: 3rem;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    width: 80vw;
   }
   
-  .website {
+  .website1 {
     width: 80%;
     max-width: 55rem;
     aspect-ratio: 16/9;
-    background-color: var(--kindagrey);
+    background-image: url(./photograpbhy_website.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .3s ease;
+  }
+
+  .website2 {
+    width: 80%;
+    max-width: 55rem;
+    aspect-ratio: 16/9;
+    background-image: url(./Pedraazul.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .3s ease;
+  }
+
+  .website3 {
+    width: 80%;
+    max-width: 55rem;
+    aspect-ratio: 16/9;
+    background-image: url(./vanessa.jpg);
+    background-position: center;
+    background-size: cover;
     transition: .3s ease;
   }
   
@@ -396,8 +445,7 @@
   /* About me styles */
   .aboutme {
    
-    transition: background-color 0.5s ease;
-    color: var(--kindawhite);
+    
     position: relative;
     overflow: hidden;
   }
@@ -405,7 +453,7 @@
   
   
   .aboutme_container {
-  
+    
     height: 50vw;
     display: flex;
     position: relative;
@@ -442,10 +490,11 @@
   
   
   .head_title h1 {
-    color: var(--kindaorange);
-    font-family: var(--roboto);
+    color: #373737;
+    font-family:  'Sofia Sans', sans-serif;
     text-align: start;
   }
+ 
   
   .line {
     margin-top: 3%; /* Set margin to create spacing between text and line */
@@ -647,44 +696,44 @@
   
   .text_aboutme {
    
-    margin-top: 100px;
-    color: var(--kindaorange);
-    font-family: var(--roboto);
-    font-size: clamp(20px, 4vw, 40px);
+    margin-top: 200px;
+    color: #373737;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
     text-align: center;
-    margin-left: 60px;
-    margin-right: 60px;
     overflow: hidden;
+    margin-bottom: 120px;
   }
   
-  .paragraph3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+  .paragraph {
     overflow: hidden;
-    line-height: 60px;
+    
+    text-align: start;
+    width: 70vw;
+    font-size: 55px;
+    font-family: 'Sofia Sans', sans-serif;
   }
- 
-  
-  .paragraph1,
-  .paragraph2,
-  .paragraph3 p{
-    margin-bottom: 50px;
-    overflow-y: hidden;
+
+  .paragraph span{
+    color: hotpink;
   }
   
+  @media (max-width: 800px) {
+    .text_aboutme{
+      margin-top: 7vw;
+    }
+    .paragraph {
+      text-align: center;
+      font-size: 7vw;
+    }
+  }
   
   @media screen and (max-width: 500px) {
     /* Dieser CSS-Code ändert die Breite des Absatzes, wenn der Screen size verkleinert wird */
-    .paragraph3 {
+    .paragraph {
       width: 100%;
     }
   }
@@ -770,7 +819,7 @@
     }
   }
   .perspective-text {
-    color:  var(--kindayellow);
+    color:  tomato;
     font-size: 45px;
     font-weight: 900;
     letter-spacing: -2px;
@@ -842,7 +891,7 @@
   }
   
   .together {
-    color: #EB4511;
+    color: rgba(12,189,241,1)
   }
   
   .perspective-text.animate p{
@@ -973,7 +1022,7 @@
     width: 150px;
     border-radius: 50%;
     border: none;
-    background-color:var(--kindaorange);
+    background:rgba(12,189,241,1);
     text-align: center;
     transition: .3s ease;
     font-size: 20px;
