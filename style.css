@@ -272,6 +272,7 @@
       overflow: hidden;
       text-align: center;
       font-size: 110px;
+      margin-bottom: -80px;
       
     }
     
@@ -406,6 +407,11 @@
     text-align: center;
     margin-top: 3rem;
     width: 80vw;
+  }
+  @media (max-width: 1000px) {
+    .project h2 {
+      font-size: clamp(50px, 4vw, 60px);
+    }
   }
   
   .website1 {
