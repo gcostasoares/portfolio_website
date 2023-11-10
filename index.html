@@ -173,7 +173,7 @@
     </div>
 
         
-    <form class="kontakt" id="kontakt">
+    <form class="kontakt" id="kontakt" onsubmit="sendEmail(event)">
 
       <div class="hallo">
         <h1>¡HOLA!</h1>
@@ -209,6 +209,14 @@
     <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>AOS.init();</script>
+    <!-- Add this in the head section of your HTML file -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+          emailjs.init("FtSdndw9qUmT_GCG_"); // Replace with your User ID from EmailJS
+      })();
+    </script>
+
   </body>
 
 

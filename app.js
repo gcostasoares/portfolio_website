@@ -166,3 +166,28 @@ var logoElementsOnLoad = document.getElementsByClassName("logo");
 for (var i = 0; i < logoElementsOnLoad.length; i++) {
   logoElementsOnLoad[i].style.pointerEvents = "none";
 }
+
+function sendEmail(event) {
+  event.preventDefault();
+
+
+  var name = document.getElementById('username').value;
+  var email = document.getElementById('email').value;
+  var message = document.querySelector('.message textarea').value;
+
+  // Use the EmailJS API to send the email
+  emailjs.send("service_8ydndpo", "your_template_template_kwpvdnm", {
+    to_name: name,
+    from_email: email,
+    message_html: message
+  }).then(
+    function(response) {
+      console.log("Email sent successfully:", response);
+
+    },
+    function(error) {
+      console.log("Email failed to send:", error);
+     
+    }
+  );
+}
