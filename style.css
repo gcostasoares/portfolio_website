@@ -136,9 +136,7 @@
   
   @media (min-width: 1300px) {
     
-    .navbar{
-      display: none;
-    }
+    
     .menu_items_burger{
       display: none;
       pointer-events: none;
@@ -153,6 +151,11 @@
     }
   }
 
+  @media (max-width: 1300px) {
+    .navbar{
+      display: none;
+    }
+  }
   
   
   
@@ -322,7 +325,7 @@
   @media (max-width: 800px) {
    .front {
     width: auto;
-    background-color: chocolate;
+  
    }
     
     .front p {
@@ -846,7 +849,7 @@
   @media (max-width: 800px){
     .invitation {
       height: 90vw;
-      margin-top: -50px;
+      
     }
   }
   .perspective-text {
