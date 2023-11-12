@@ -437,6 +437,7 @@
   }
   
   .website1 {
+    cursor: pointer;
     width: 80%;
     max-width: 55rem;
     aspect-ratio: 16/9;
@@ -824,8 +825,8 @@
   
   .invitation {
    
-    margin-top: 130px;
-    margin-bottom: 90px;
+    margin-top: 100px;
+  
     height: 40vw;
     display: flex;
     align-items: center;
@@ -844,6 +845,7 @@
   @media (max-width: 800px){
     .invitation {
       height: 90vw;
+      margin-top: -50px;
     }
   }
   .perspective-text {
@@ -860,6 +862,7 @@
     position: absolute;
     top:0;
     padding-top: 20px;
+   
   }
   @media (max-width: 1300px) {
     .perspective-text{
@@ -953,6 +956,7 @@
     font-size: clamp(20px, 4vw, 40px);
     margin-bottom: 200px;
     z-index: 10000;
+  
   }
 
   .message-success {
