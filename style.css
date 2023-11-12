@@ -321,6 +321,7 @@
   @media (max-width: 800px) {
    .front {
     width: auto;
+    background-color: chocolate;
    }
     
     .front p {
