@@ -320,7 +320,7 @@
   
   @media (max-width: 800px) {
    .front {
-    width: 90vw;
+    width: auto;
    }
     
     .front p {
