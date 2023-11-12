@@ -319,6 +319,10 @@
   }
   
   @media (max-width: 800px) {
+    .front {
+      margin: 0;
+      padding: 0;
+    }
     
     .front p {
       font-size: 70px;
