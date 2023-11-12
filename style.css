@@ -134,13 +134,14 @@
   }
   
   
-  @media (max-width: 1300px) {
+  @media (min-width: 1300px) {
     
     .navbar{
       display: none;
     }
     .menu_items_burger{
       display: none;
+      pointer-events: none;
    
     }
     .items {
