@@ -16,6 +16,7 @@
     --kindayellow: #90DDF0;
     --kindaorange: #373737;
     --gradient: 100% 100% 0 0 linear-gradient(90deg, #71B1FFFF 0%, #F8E9E9FF 99%);
+    --myblue: #71B1FFFF;
     --roboto: 'Roboto', sans-serif;
     --prata: 'Prata', serif;
   }
@@ -443,40 +444,115 @@
     margin-top:200px;
   }
   
-  .website1 {
-    cursor: pointer;
+  .website1-container,
+  .website2-container,
+  .website3-container {
+    position: relative;
     width: 80%;
     max-width: 55rem;
     aspect-ratio: 16/9;
+    margin-bottom: 150px;
+  }
+  
+  .website1 {
+
+    width: 100%;
+    height: 100%;
     background-image: url(./photograpbhy_website.jpg);
     background-position: center;
     background-size: cover;
     transition: .3s ease;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
   }
-
   .website2 {
-    width: 80%;
-    max-width: 55rem;
-    aspect-ratio: 16/9;
+   
+    width: 100%;
+    height: 100%;
     background-image: url(./Pedraazul.jpg);
     background-position: center;
     background-size: cover;
     transition: .3s ease;
-  }
-
-  .website3 {
-    width: 80%;
-    max-width: 55rem;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
     aspect-ratio: 16/9;
+  }
+  .website3 {
+   
+    width: 100%;
+    height: 100%;
     background-image: url(./vanessa.jpg);
     background-position: center;
     background-size: cover;
     transition: .3s ease;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    aspect-ratio: 16/9;
   }
   
-  .end_project h2 {
-    margin-bottom: 2px;
+  .overlay {
+    position: absolute;
+    background-color: var(--myblue);
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: 0.5s ease;
+    gap: 40px;
+    overflow: hidden;
   }
+  
+  .overlay h1,
+  .overlay h2,
+  .overlay h5 {
+    text-align: start;
+    font-size: 30px;
+    font-family: 'Sofia Sans', sans-serif;
+    margin-left: 50px;
+    color: #fff;
+    overflow: hidden;
+  }
+  .overlay h1 {
+    font-size: 50px;
+    text-transform:uppercase;
+    
+  }
+  a {
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .overlay h5 {
+    font-weight: 600;
+    transition: 0.5s ease;
+  }
+  .overlay h5:hover {
+    
+    text-decoration: underline;
+  }
+
+  .website1-container:hover .overlay,
+  .website2-container:hover .overlay,
+  .website3-container:hover .overlay {
+    height: 100%;
+  }
+  
+
+
+
+  
+  
+  
   
   /* About me styles */
   .aboutme {
@@ -489,7 +565,7 @@
   
   
   .aboutme_container {
-    
+    color: var(--myblue);
     height: 50vw;
     display: flex;
     position: relative;
@@ -511,7 +587,7 @@
   
   .head_title {
     overflow: hidden;
-   
+    color: #71B1FFFF;
     position: absolute;
     font-size: 3vw; /* Use vw for text size for scalability */
     width: 100%; /* Make the text container 100% width */
@@ -526,7 +602,8 @@
   
   
   .head_title h1 {
-    color: #373737;
+    color: var(--kindagrey);
+    font-size: 55px;
     font-family:  'Sofia Sans', sans-serif;
     text-align: start;
   }
@@ -534,11 +611,12 @@
   
   .line {
     margin-top: 3%; /* Set margin to create spacing between text and line */
-    border: 4px solid var(--kindaorange); /* Use vw for line thickness for scalability */
+    border: 4px solid var(--myblue); /* Use vw for line thickness for scalability */
     border-bottom: none;
     border-left: none;
     border-right: none;
     width: 100%; /* Make the line 100% width */
+    color: #71B1FFFF;
   }
   
   /* Media Queries - Increase font-size by 1vw for every 100px reduction */
@@ -685,15 +763,20 @@
     
     color: var(--kindagrey);
     font-family: var(--roboto);
-    font-size: 18px;
+    font-size: 28px;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     align-items: flex-start;
     justify-content:flex-start;
-    
+    gap: 25px;
     z-index: 6;
     top: 0;
+  }
+
+  .photo_title h5 {
+    color: var(--myblue);
+    width: 40vw;
   }
  
   
@@ -749,7 +832,7 @@
     
     text-align: start;
     width: 70vw;
-    font-size: 55px;
+    font-size: 35px;
     font-family: 'Sofia Sans', sans-serif;
   }
 
@@ -763,7 +846,7 @@
     }
     .paragraph {
       text-align: center;
-      font-size: 7vw;
+      font-size: 5vw;
     }
   }
   
@@ -1157,3 +1240,22 @@
     color: rgb(142, 140, 140);
   }
   
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 30px;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    color: #3d3d3d;
+    margin-bottom: 100px;
+    
+  }
+  a {
+    color: #3d3d3d;
+  }
