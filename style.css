@@ -439,6 +439,9 @@
       font-size: 4vw;
     }
   }
+  .work_list {
+    margin-top:200px;
+  }
   
   .website1 {
     cursor: pointer;
@@ -751,7 +754,7 @@
   }
 
   .paragraph span{
-    color: hotpink;
+    color: #71B1FFFF;
   }
   
   @media (max-width: 800px) {
