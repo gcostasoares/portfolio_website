@@ -416,7 +416,7 @@
   .portfolio {
     overflow: hidden;
     
-    margin-bottom: -250px;
+    margin-bottom: -150px;
   }
   
   .project {
@@ -426,6 +426,7 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
+    gap: 35px;
   }
   
   .project p {
@@ -447,10 +448,10 @@
   .website3-container {
     position: relative;
     width: 80%;
-  
+    
     max-width: 55rem;
     aspect-ratio: 16/9;
-    margin-bottom: 75x;
+    margin-bottom: 150px;
   }
 
   
