@@ -415,6 +415,8 @@
   /* Portfolio styles */
   .portfolio {
     overflow: hidden;
+    
+    margin-bottom: -200px;
   }
   
   .project {
@@ -435,11 +437,7 @@
     margin-top: 3rem;
     width: 80vw;
   }
-  @media (max-width: 1000px) {
-    .project p {
-      font-size: 4vw;
-    }
-  }
+
   .work_list {
     margin-top:200px;
   }
@@ -449,10 +447,12 @@
   .website3-container {
     position: relative;
     width: 80%;
+  
     max-width: 55rem;
     aspect-ratio: 16/9;
     margin-bottom: 150px;
   }
+
   
   .website1 {
 
@@ -466,6 +466,9 @@
     z-index: 2;
     overflow: hidden;
   }
+
+    
+  
   .website2 {
    
     width: 100%;
@@ -541,13 +544,65 @@
     text-decoration: underline;
   }
 
+  
+
+  
+  .overlay h1,
+  .overlay h2,
+  .overlay h5 {
+    text-align: start;
+    font-size: 30px;
+    font-family: 'Sofia Sans', sans-serif;
+    margin-left: 50px;
+    color: #fff;
+    overflow: hidden;
+  }
+  .overlay h1 {
+    font-size: 50px;
+    text-transform:uppercase;
+    
+  }
+  a {
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .overlay h5 {
+    font-weight: 600;
+    transition: 0.5s ease;
+  }
+  .overlay h5:hover {
+    
+    text-decoration: underline;
+  }
+
+  @media (min-width: 900px) {
   .website1-container:hover .overlay,
   .website2-container:hover .overlay,
   .website3-container:hover .overlay {
     height: 100%;
   }
-  
+}
 
+  @media (max-width: 900px) {
+    .website1-container.clicked .overlay,
+    .website2-container.clicked .overlay,
+    .website3-container.clicked .overlay {
+      height: 100%;
+    }
+    .overlay {
+      gap: 20px;
+    }
+    .overlay h1,
+    .overlay h2,
+    .overlay h5 {
+      font-size: 4vw;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+  }
+  
 
 
   
@@ -793,16 +848,21 @@
     .photo_container{
       flex-direction: column-reverse;
       gap: 0;
-      position: relative;
+     
       margin-top: 100px;
     }
     .photo_title{
-      position: absolute;
+      
       font-size: 5vw;
       z-index: 7;
       top: 0;
       left: 10%;
-      align-items: flex-start;
+      align-items: center;
+      text-align: center;
+     
+    }
+    .photo_title h5 {
+      width: 80vw;
     }
     .photo{
       padding-top: 100px;
@@ -1258,4 +1318,10 @@
   }
   a {
     color: #3d3d3d;
+  }
+
+  @media (max-width: 600px) {
+    footer {
+    font-size: 20px;
+    }
   }

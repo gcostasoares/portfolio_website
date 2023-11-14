@@ -18,6 +18,7 @@ const items = document.getElementById("items");
 let menubgOpen = false;
 
 menuItems.style.opacity = "0%";
+items.style.display = 'none';
 
 menuBurger.addEventListener("click", () => {
   if (!menuOpen) {
@@ -25,17 +26,21 @@ menuBurger.addEventListener("click", () => {
     menuItems.style.opacity = "0%";
     menuItems.style.display = "none";
     menubgOpen = true;
+    items.style.display = 'none';
+
   } else {
     bgmenuBurger.style.transform = "translateX(0)";
     menuItems.style.opacity = "100%";
     menuItems.style.display = "flex";
     menubgOpen = false;
+    items.style.display = 'flex';
   }
 });
 
-const menuLinks = document.getElementById("items");
 
-menuLinks.addEventListener("click", () => {
+
+
+items.addEventListener("click", () => {
 	bgmenuBurger.style.transform = "translateX(100%)";
     menuItems.style.opacity = "0%";
     menuItems.style.display = "none";
@@ -214,5 +219,14 @@ burgerBtn.addEventListener('click', () => {
   burgerBtn.classList.toggle('open');
   menuItemsBurger.classList.toggle('menu_hidden');
 });
+
+function toggleOverlay(containerId) {
+  const container = document.querySelector(`.${containerId}`);
+  if (container.classList.contains('clicked')) {
+    container.classList.remove('clicked');
+  } else {
+    container.classList.add('clicked');
+  }
+}
 
 
