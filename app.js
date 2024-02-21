@@ -1,100 +1,59 @@
-const menuBtn = document.querySelector('.btn');
-let menuOpen = false;
+const burgerElement = document.querySelector('.burger');
+const navElement = document.querySelector('.overlayer'); // Corrected class name
 
-menuBtn.addEventListener('click', () => {
-  if (!menuOpen) {
-    menuBtn.classList.add('open');
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove('open');
-    menuOpen = false;
-  }
+burgerElement.addEventListener('click', function() {
+  const isExpanded = burgerElement.getAttribute('aria-expanded') === 'true'; 
+  burgerElement.setAttribute('aria-expanded', !isExpanded);
+  navElement.style.left = isExpanded ? '100vw' : '0';
 });
 
-const bgmenuBurger = document.getElementById("new_menu");
-const menuBurger = document.getElementById("burger_menu");
-const menuItems = document.getElementById("menu_items");
-const items = document.getElementById("items");
-let menubgOpen = false;
+const backgroundText = document.querySelector('.background-text');
 
-menuItems.style.opacity = "0%";
-items.style.display = 'none';
+window.addEventListener('scroll', function() {
+    var scrollRatio = 0.5;
+    const scrollFactor = (window.scrollY*scrollRatio) + 'px'; 
+    backgroundText.style.setProperty('--scrollFactor', scrollFactor);
 
-menuBurger.addEventListener("click", () => {
-  if (!menuOpen) {
-    bgmenuBurger.style.transform = "translateX(100%)";
-    menuItems.style.opacity = "0%";
-    menuItems.style.display = "none";
-    menubgOpen = true;
-    items.style.display = 'none';
-
-  } else {
-    bgmenuBurger.style.transform = "translateX(0)";
-    menuItems.style.opacity = "100%";
-    menuItems.style.display = "flex";
-    menubgOpen = false;
-    items.style.display = 'flex';
-  }
 });
 
+var textSize = document.querySelector('.perspective-text__size');
+var textPerspective = document.querySelector('.perspective-text');
+
+function textSizeFunction() {
+    var windowWidth = window.innerWidth;
 
 
+    var textSizeRatio = windowWidth / 1000;
 
-items.addEventListener("click", () => {
-	bgmenuBurger.style.transform = "translateX(100%)";
-    menuItems.style.opacity = "0%";
-    menuItems.style.display = "none";
-	menuBtn.classList.remove('open');
-    menuOpen = false;
-});
+    var textSizeRatioValue = textSizeRatio > 1 ? 1 : (textSizeRatio < 1 && textSizeRatio > 0.5 ? textSizeRatio : 0.5);
 
-window.addEventListener("scroll", function () {
-  var element = document.querySelector(".perspective-text");
-  var formSection = document.getElementById("form");
-  var formSectionTop = formSection.offsetTop;
-  var scrollPosition = window.scrollY;
+    textSize.style.setProperty('--textSizeRatioValue', textSizeRatioValue);
+}
 
-  if (scrollPosition >= formSectionTop - 400) {
-    element.classList.add("animate");
-  } else {
-    element.classList.remove("animate");
-  }
-});
+textSizeFunction();
 
-// Smooth scrolling for menu links
-const navLinks = document.querySelectorAll(".navbar a");
+window.addEventListener('resize', textSizeFunction);
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
 
-    const targetId = link.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(targetId);
+// Get the current scroll position
 
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-      });
+var perspectiveText = document.querySelector(".perspective-text");
+
+function activateAnimation() {
+    var perspectiveTextPosition = perspectiveText.offsetTop+400;
+    var scrollPosition = window.scrollY;
+    console.log(perspectiveTextPosition);
+
+
+    if (scrollPosition >= perspectiveTextPosition) {
+        perspectiveText.classList.add("active");
+    } else {
+        perspectiveText.classList.remove("active");
     }
-  });
-});
+}
 
-const navItems = document.querySelectorAll(".menu_items a");
+window.addEventListener("scroll", activateAnimation);
 
-navItems.forEach((item) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const targetId = link.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(targetId);
-
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  });
-});
 
 const form = document.getElementById('kontakt');
 const username = document.getElementById('username');
@@ -173,60 +132,6 @@ function setSuccessFor(input) {
 
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zAZ]{2,}))$/.test(email);
-}
-
-
-
-
-function changeBackgroundColor(color) {
-  document.body.style.backgroundColor = color;
-}
-
-window.addEventListener("scroll", () => {
-  var scrollPosition = window.scrollY;
-  var aboutmeSection = document.getElementById("aboutme");
-  var aboutmeSectionTop = aboutmeSection.offsetTop;
-  var portfolioSection = document.getElementById("portfolio");
-  var portfolioSectionTop = portfolioSection.offsetTop;
-  var formSection = document.getElementById("form");
-  var formSectionTop = formSection.offsetTop;
-  var logoElements = document.getElementsByClassName("logo");
-
-  for (var i = 0; i < logoElements.length; i++) {
-    if (scrollPosition === 0) {
-      logoElements[i].style.opacity = 0; // Hide with fading effect
-      logoElements[i].style.pointerEvents = "none"; // Make it unclickable
-    } else {
-      logoElements[i].style.opacity = 1; // Show with fading effect
-      logoElements[i].style.pointerEvents = "auto"; // Make it clickable
-    }
-  }
-
- 
-});
-
-var logoElementsOnLoad = document.getElementsByClassName("logo");
-for (var i = 0; i < logoElementsOnLoad.length; i++) {
-  logoElementsOnLoad[i].style.pointerEvents = "none";
-}
-
-
-// Modify your JavaScript to toggle the 'open' class
-const burgerBtn = document.querySelector('.btn');
-const menuItemsBurger = document.querySelector('.menu_items_burger');
-
-burgerBtn.addEventListener('click', () => {
-  burgerBtn.classList.toggle('open');
-  menuItemsBurger.classList.toggle('menu_hidden');
-});
-
-function toggleOverlay(containerId) {
-  const container = document.querySelector(`.${containerId}`);
-  if (container.classList.contains('clicked')) {
-    container.classList.remove('clicked');
-  } else {
-    container.classList.add('clicked');
-  }
 }
 
 
