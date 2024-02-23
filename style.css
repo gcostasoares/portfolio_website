@@ -916,6 +916,9 @@ h3 {
   .scroll-arrow__content:hover svg {
     transform: translateY(5px);
 }
+.scroll-arrow__label {
+  color: var(--midContrast);
+}
 
 
   
