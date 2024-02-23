@@ -692,6 +692,7 @@ h3 {
     position: static;
     font-size: clamp(25px, 4vw, 30px);
     padding-right: 150px;
+    color: var(--contrast);
     
   }
   
@@ -791,6 +792,7 @@ h3 {
   
   .message label {
     font-size: clamp(25px, 4vw, 30px);
+    color: var(--contrast);
   }
   @media (max-width: 350px) {
     .message label {
@@ -891,7 +893,7 @@ h3 {
   }
 
   .button:hover {
-    background-color: var(--accent);
+    background-color: var(--accentBlue);
     color:var(--bgContrast);
     border: 1px solid transparent;
   }
@@ -907,10 +909,12 @@ h3 {
   .pointer svg{
     width: 30px;
     fill: var(--accentBlue);
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-5px);
   }
 
   .scroll-arrow__content:hover svg {
-    fill: var(--accent);
+    transform: translateY(5px);
 }
 
 
