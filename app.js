@@ -108,14 +108,14 @@ function checkInputs() {
   const emailValue = email.value.trim();
 
   if (usernameValue === '') {
-    setErrorFor(username, 'Name ist ungültig');
+    setErrorFor(username, 'Not a valid name');
   } else {
     setSuccessFor(username);
     nameValidation = true;
   }
 
   if (emailValue === '') {
-    setErrorFor(email, 'Emailadresse ist ungültig');
+    setErrorFor(email, 'Not a valid e-mail');
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, 'Not a valid email');
   } else {
