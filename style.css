@@ -910,7 +910,7 @@ h3 {
     width: 30px;
     fill: var(--accentBlue);
     transition: all 0.5s ease-in-out;
-    transform: translateY(-5px);
+    
   }
 
   .scroll-arrow__content:hover svg {
