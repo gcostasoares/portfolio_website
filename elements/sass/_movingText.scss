@@ -1,0 +1,44 @@
+@import "./variable";
+
+
+.background-text-wrapper {
+    height: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto!important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.background-text{
+    --scrollFactor: 0;
+    font-weight: 900;
+    font-stretch: semi-condensed;
+    color: $bgContrast;
+    overflow: hidden;
+    pointer-events: none;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: .68;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    font-size: calc(#{$vh}/100*73.5vh);
+}
+
+.background-text__container{
+    margin: calc(#{$baseline}*-1);
+    height: calc(#{$baseline}*2 + 100%);
+    width: calc(#{$baseline}*2 + 100%);
+}
+
+
+.background-text__container.active .background-text__line:nth-child(1) {
+    transform: translateX(calc(0vh - var(--scrollFactor)*1));
+}
+.background-text__container.active .background-text__line:nth-child(2) {
+    transform: translateX(calc(0vh + var(--scrollFactor)*1));
+}
+
