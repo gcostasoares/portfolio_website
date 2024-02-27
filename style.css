@@ -829,4 +829,29 @@ button:hover {
 
 .scroll-arrow__label {
   color: #4a4946;
+}
+
+.footer {
+  background-color: #f73c59;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.footer__container {
+  flex: 1 0 auto;
+  padding: calc(1.5rem * 2) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: calc(1.5rem * 3);
+}
+
+.footer__content {
+  line-height: calc(1.5rem * 0.1);
+  display: block;
+}
+
+.email-address {
+  margin: calc(1.5rem * 3) 0;
 }/*# sourceMappingURL=style.css.map */
