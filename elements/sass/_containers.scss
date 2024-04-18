@@ -81,10 +81,10 @@
   }
   
   @media (min-width: 1024px) {
-    .case-study:nth-child(2) {
+    .case-study:nth-child(even) {
       flex-direction: row-reverse;
     }
-    .case-study:nth-child(2) .case-study__image {
+    .case-study:nth-child(even) .case-study__image {
       left: auto;
       right: 50px;
     }
