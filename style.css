@@ -467,10 +467,10 @@ text {
 }
 
 @media (min-width: 1024px) {
-  .case-study:nth-child(2) {
+  .case-study:nth-child(even) {
     flex-direction: row-reverse;
   }
-  .case-study:nth-child(2) .case-study__image {
+  .case-study:nth-child(even) .case-study__image {
     left: auto;
     right: 50px;
   }
@@ -798,25 +798,6 @@ button:hover {
     margin-top: 0;
   }
 }
-.button {
-  border: 1px solid #6184D8;
-  border-radius: 50px;
-  display: inline-block;
-  text-align: center;
-  background-color: transparent;
-  font-family: "Roboto", sans-serif;
-  color: #6184D8;
-  padding: 1px 25px;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #6184D8;
-  color: #E4E6C3;
-  border: 1px solid transparent;
-}
-
 .pointer svg {
   width: 30px;
   fill: #6184D8;
@@ -854,4 +835,23 @@ button:hover {
 
 .email-address {
   margin: calc(1.5rem * 3) 0;
+}
+
+.button {
+  border: 1px solid #6184D8;
+  border-radius: 50px;
+  display: inline-block;
+  text-align: center;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  color: #6184D8;
+  padding: 1px 25px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #6184D8;
+  color: #E4E6C3;
+  border: 1px solid transparent;
 }/*# sourceMappingURL=style.css.map */
