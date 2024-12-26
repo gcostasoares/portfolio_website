@@ -71,7 +71,6 @@ textSizeFunction();
 window.addEventListener('resize', textSizeFunction);
 
 
-
 var perspectiveText = document.querySelector(".perspective-text");
 
 function activateAnimation() {
@@ -168,3 +167,23 @@ function setSuccessFor(input) {
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zAZ]{2,}))$/.test(email);
 }
+
+
+
+
+
+/* import { handleFormSubmission } from './elements/form.js';
+import { initializeHeaderAndNavigation } from './elements/header.js';
+import { movingText } from "./elements/movingText.js";
+import { handleScroll, handleBurgerMenu, handleTextSize, handleAnimation } from './elements/perpectiveText.js';
+
+handleScroll();
+handleBurgerMenu();
+handleTextSize();
+handleAnimation();
+
+
+movingText();
+initializeHeaderAndNavigation();
+handleFormSubmission(); */
+
