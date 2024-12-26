@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: "Caprasimo", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   color: #4a4946;
   display: flex;
@@ -308,13 +308,13 @@ text {
   left: 100vw;
   width: 100%;
   height: 100%;
-  background-color: #f73c59;
+  background-color: #4a4946;
   z-index: 999;
   transition: left 0.3s ease;
 }
 
 .nav__container a:hover {
-  color: #f73c59;
+  color: #4a4946;
 }
 
 @media (max-width: 991px) {
@@ -363,7 +363,7 @@ text {
     font-size: 1.5rem;
   }
   .burger__nav__container:hover {
-    color: #f73c59;
+    color: #4a4946;
   }
 }
 .landing-page-builder {
@@ -616,7 +616,7 @@ text {
 }
 
 .together {
-  color: #f73c59;
+  color: #4a4946;
 }
 
 .form-control {
@@ -812,7 +812,7 @@ button:hover {
 }
 
 .footer {
-  background-color: #f73c59;
+  background-color: #4a4946;
   color: #fff;
   min-height: 100vh;
 }
