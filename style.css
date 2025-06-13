@@ -38,6 +38,25 @@ body {
   overflow: hidden;
 }
 
+/* full-screen black overlay */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1.6s ease-out, visibility 0s linear 0.6s;
+  visibility: visible;
+  pointer-events: none;
+}
+/* when we add .hidden, it fades and then hides */
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
 .header {
   position: fixed;
   top: 0;
@@ -153,11 +172,64 @@ p {
   align-items: center;
   justify-content: flex-end;
   pointer-events: all;
+  
 }
 
 .header__section h4 {
   margin: 0;
 }
+
+#circle { 
+  position: relative; 
+  height: 30vh;
+  overflow: hidden;     
+  transform:scale(2);   
+  transform-origin:top left; 
+}
+
+#circle text { 
+  font-family: "Playfair Display", serif;
+  font-size: 13px; 
+  fill:#4a4946;
+}
+
+#circle svg { 
+  position: absolute;
+  left: -80px;
+  top: -30px;
+
+  -webkit-animation-name: rotate;
+     -moz-animation-name: rotate;
+      -ms-animation-name: rotate;
+       -o-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 14s;
+     -moz-animation-duration: 14s;
+      -ms-animation-duration: 14s;
+       -o-animation-duration: 14s;
+          animation-duration: 14s;
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+     -moz-animation-timing-function: linear;
+      -ms-animation-timing-function: linear;
+       -o-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(360deg); }
+}
+
 
 .background-text-wrapper {
   height: 0;
@@ -212,6 +284,21 @@ p {
   z-index: 100;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/portfolio_website/assets/binarycode.jpg') center/cover no-repeat;
+  z-index: 0;
+  filter: brightness(var(--brightness)) opacity(50%);
+}
+
+
+/* your real content sits above both layers */
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
 .hero__content {
   padding-top: calc(1.5rem * 7);
   padding-bottom: calc(1.5rem * 2);
@@ -220,7 +307,7 @@ p {
   justify-content: flex-start;
 }
 
-.hero__circle {
+/*.hero__circle {
   position: absolute;
   width: calc(1.5rem * 10);
   top: calc(1.5rem * 2.5);
@@ -254,11 +341,11 @@ text {
     transform: rotate(360deg);
   }
 }
-/* Textcircle styles */
+
 .textcircle {
   transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
   transform-origin: 250px 250px;
-}
+} */
 
 .scroll-arrow--vertical {
   display: block;
@@ -401,6 +488,18 @@ text {
   position: relative;
 }
 
+.case-separator {
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 7rem 0;
+  /* Start bei 0% Breite, aus der Mitte heraus */
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 1s ease-out;
+}
+
+
 .case-study-teaser {
   display: flex;
   width: 100%;
@@ -443,8 +542,23 @@ text {
   aspect-ratio: 16/9;
   width: 30vw;
   border-radius: 8px;
-  background-color: #e7e3d9;
+  background-color: #e4e4e4;
+  will-change: transform;
+
+  /* stelle sicher, dass jede transform-Änderung in 1 s animiert wird */
+  transition: transform 1s ease-out;
 }
+
+/* Initial-Offsets über CSS-Variablen oder direkt */
+.case-study__background:nth-child(odd) {
+  transform: translate(50px, 50px);
+}
+.case-study__background:nth-child(even) {
+  transform: translate(50px, 50px);
+}
+
+
+
 
 .case-study__image {
   position: absolute;
@@ -474,6 +588,10 @@ text {
     left: auto;
     right: 50px;
   }
+  .case-study__background {
+  transform: translate(50px, 50px);
+}
+
 }
 @media (max-width: 1024px) {
   .case-study {
@@ -484,10 +602,11 @@ text {
     position: relative;
     width: 100%;
   }
+
   .case-study__background {
-    position: relative;
-    left: 0;
     width: 50vw;
+
+    left: 0;
   }
   .case-study__image {
     width: 50vw;
@@ -506,15 +625,34 @@ text {
   position: relative;
 }
 
+/* shared: animate all transform changes over 1s */
+.case-study__background,
+.about-me__background {
+  transition: transform 1s ease-out;
+}
+
+
+/* about-me initial offset */
+.about-me {
+  margin-bottom: 6rem;
+}
 .about-me__background {
   position: relative;
-  aspect-ratio: 4/5;
   width: 15vw;
-  border-radius: 8px;
-  background-color: #e7e3d9;
   min-width: 150px;
   max-width: 700px;
+
+  /* exakt wie dein img: */
+  aspect-ratio: 2/3;  
+
+  border-radius: 8px;
+  background-color: #e4e4e4;
+
+  transform: translate(50px, 50px);
+  transition: transform 1s ease-out;
+  will-change: transform;
 }
+
 
 .about-me__image {
   position: absolute;
@@ -568,7 +706,7 @@ text {
   letter-spacing: -2px;
   text-transform: uppercase;
   height: auto;
-  margin-bottom: calc(1.5rem * 2);
+  margin-bottom: calc(1.5rem * 4);
   padding-right: calc(1.5rem * 4);
 }
 @media (max-width: 576px) {
@@ -710,6 +848,7 @@ text {
   transition: 0.3s ease;
   font-size: 20px;
   color: #E4E6C3;
+  margin-bottom: calc(1.5rem * 4);
 }
 
 button p {
@@ -854,3 +993,185 @@ button:hover {
   color: #E4E6C3;
   border: 1px solid transparent;
 }/*# sourceMappingURL=style.css.map */
+
+.impressum {
+  /* übernimmt die Center-Logik deiner .app/.wrapper */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  min-height: 100vh;                  /* volle Fensterhöhe */
+  padding: calc(1.5rem * 7)           /* oberer Abstand (≈ Header-Höhe) */
+           calc(1.5rem * 3);
+
+  background-color: #fff;             /* Weiß wie die Homepage */
+  color: #4a4946;                     /* Haupttextfarbe */
+}
+
+/* Haupt-Container mit derselben Max-Breite wie .container */
+.impressum__container {
+  width: 100%;
+  max-width: 60rem;                   /* identisch zu deinem .container */
+  margin: 0 auto;
+}
+
+/* ------------ Typografie ------------------------ */
+.impressum h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(32px, 4vw, 48px);
+  color: #22211f;
+  margin-bottom: calc(1.5rem * 2);
+}
+
+.impressum h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #22211f;
+  margin: calc(1.5rem * 2) 0 calc(1.5rem * 0.5);
+}
+
+.impressum p,
+.impressum ul,
+.impressum li {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: calc(1.5rem * 1);
+}
+
+.impressum ul {
+  list-style: disc inside;
+  padding-left: 1rem;                 /* leichter Einzug */
+}
+
+/* Quelle / Copyright */
+.impressum .source {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #4a4946;
+}
+
+/* ------------ Links ----------------------------- */
+.impressum a {
+  color: black;                     /* Link-Blau deiner Seite */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.impressum a:hover {
+  color: #4a4946;                     /* Dunkelgrau beim Hover */
+}
+
+/* ------------ Reaktionsfähigkeit ---------------- */
+@media (max-width: 576px) {
+  .impressum {
+    padding: calc(1.5rem * 6) calc(1.5rem * 0.5);
+  }
+  .impressum h1 {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+  .impressum h2 {
+    font-size: 1rem;
+  }
+}
+
+.impressum a,
+.datenschutz a,
+.footer__content a {          /* weiß */
+  text-decoration: none;  /* keine Unterstreichung */
+}
+
+.impressum__back{
+  text-align:center;
+  margin-top:calc(1.5rem * 2);
+}
+
+.button--filled{
+  background-color:#6184D8;
+  color:#E4E6C3;
+  border:1px solid transparent;
+}
+.button--filled:hover{
+  background-color:transparent;
+  color:#6184D8;
+  border:1px solid #6184D8;
+}
+
+.datenschutz{
+  /* dieselben Werte wie .impressum */
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+
+  min-height:100vh;
+  padding:calc(1.5rem * 7) calc(1.5rem * 3);
+  background:#fff;
+  color:#4a4946;
+}
+.datenschutz__container{
+  width:100%;
+  max-width:60rem;
+  margin:0 auto;
+}
+
+/* Typo */
+.datenschutz h1{
+  font-family:"Playfair Display",serif;
+  font-weight:500;
+  font-size:clamp(32px,4vw,48px);
+  color:#22211f;
+  margin-bottom:calc(1.5rem * 2);
+}
+.datenschutz h2{
+  font-family:"Playfair Display",serif;
+  font-weight:500;
+  font-size:1.2rem;
+  color:#22211f;
+  margin:calc(1.5rem * 2) 0 calc(1.5rem * 0.5);
+}
+.datenschutz p,
+.datenschutz ul,
+.datenschutz li{
+  font-family:"Roboto",sans-serif;
+  font-size:1rem;
+  line-height:1.6;
+  margin-bottom:calc(1.5rem * 1);
+}
+.datenschutz ul{
+  list-style:disc inside;
+  padding-left:1rem;
+}
+.datenschutz .source{
+  font-size:0.9rem;
+  font-style:italic;
+  color:#4a4946;
+}
+
+/* Links */
+.datenschutz a{
+  color:#6184D8;
+  text-decoration:underline;
+  transition:color .3s ease;
+}
+.datenschutz a:hover{
+  color:#4a4946;
+}
+
+/* Button-Zentrierung */
+.datenschutz__back{
+  text-align:center;
+  margin-top:calc(1.5rem * 2);
+}
+
+/* Responsive */
+@media(max-width:576px){
+  .datenschutz{
+    padding:calc(1.5rem * 6) calc(1.5rem * .5);
+  }
+  .datenschutz h1{font-size:clamp(28px,6vw,40px);}
+  .datenschutz h2{font-size:1rem;}
+}

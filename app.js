@@ -25,6 +25,27 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollTop;
 });
 
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+// 2) On window.load: jump to top, fade out loader, then remove it
+window.addEventListener('load', () => {
+  // ensure we start at top
+  window.scrollTo(0, 0);
+
+  const loader = document.getElementById('loader');
+  if (!loader) return;
+
+  // trigger the fade
+  loader.classList.add('hidden');
+
+  // after the fade (0.6s), you could remove it entirely
+  loader.addEventListener('transitionend', () => {
+    loader.remove();
+  }, { once: true });
+});
+
 
 
 const burgerElement = document.querySelector('.burger');
@@ -167,6 +188,78 @@ function setSuccessFor(input) {
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zAZ]{2,}))$/.test(email);
 }
+
+const hero     = document.querySelector('.hero');
+const min      = 200;
+const max      = 2000;
+const duration = 2000; // ms to go from max→min
+
+let startTime = null;
+
+function tick(now) {
+  if (startTime === null) startTime = now;
+  const elapsed = now - startTime;
+
+  if (elapsed >= duration) {
+    // we've reached the end—snap to min and stop
+    hero.style.setProperty('--brightness', min + '%');
+    return;
+  }
+
+  // linear interpolation: val = max + (min - max) * (elapsed/duration)
+  const ratio = elapsed / duration;
+  const val = max + (min - max) * ratio;
+
+  hero.style.setProperty('--brightness', val + '%');
+  requestAnimationFrame(tick);
+}
+
+// kick it off
+requestAnimationFrame(tick);
+
+
+
+window.addEventListener('scroll', onScroll);
+function onScroll() {
+  const scrollTop = window.scrollY;
+  const viewH     = window.innerHeight;
+  const isLarge   = window.innerWidth > 1024;
+
+  document
+    .querySelectorAll('.case-study__background, .about-me__background, .case-separator')
+    .forEach((el, idx) => {
+      const elTop   = el.getBoundingClientRect().top + scrollTop;
+      const elH     = el.offsetHeight;
+      const trigger = elTop - viewH + elH * 0.3;
+
+      if (el.classList.contains('case-separator')) {
+        // Separator: scaleX 0→1
+        el.style.transform = scrollTop >= trigger
+          ? 'scaleX(1)'
+          : 'scaleX(0)';
+      } else {
+        // Backgrounds with responsive initX
+        const initX = isLarge
+          ? (el.classList.contains('case-study__background')
+              ? (idx % 2 === 0 ? -50 : 50)
+              : 50)
+          : 50;
+        const initY = 50;
+
+        el.style.transform = scrollTop >= trigger
+          ? 'translate(0, 0)'
+          : `translate(${initX}px, ${initY}px)`;
+      }
+    });
+}
+
+// initial check on load
+onScroll();
+
+
+
+
+
 
 
 

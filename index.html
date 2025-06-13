@@ -11,6 +11,7 @@
     <title>Costa Soares Website</title>
 </head>
 <body>
+    <div id="loader"></div>
    <div class="layout">
     <div class="app">
         <div class="wrapper">
@@ -25,9 +26,9 @@
                             <div class="header__main">
                                 <nav class="nav">
                                     <div class="nav__container">
-                                        <a href="#about">About Gabriel</a>
-                                        <a href="#projects">Projects</a>
-                                        <a href="#contact">Contact</a>
+                                        <a href="#about">Über mich</a>
+                                        <a href="#projects">Projekte</a>
+                                        <a href="#contact">Kontakt<a>
                                     </div>
                                 </nav>
                                 <div class="burger" aria-expanded="false">
@@ -37,9 +38,9 @@
                                 </div>
                                 <div class="overlayer">
                                     <nav class="burger__nav__container">
-                                        <a href="#about">About Gabriel</a>
-                                        <a href="#projects">Projects</a>
-                                        <a href="#contact">Contact</a>
+                                        <a href="#about">Über mich</a>
+                                        <a href="#projects">Projekte</a>
+                                        <a href="#contact">Kontakt</a>
                                     </nav>
                                 </div>
                             </div>
@@ -52,16 +53,14 @@
 
 
 
-                <div class="background-text-wrapper">
+                <!-- <div class="background-text-wrapper">
                     <div class="background-text">
                         <div class="background-text__container active">
                             <div class="background-text__line align-right">Design</div>
                             <div class="background-text__line align-right">&Frontend</div>
                         </div>
                     </div>
-                </div>
-
-
+                </div> -->
 
 
                 <div class="hero-wrapper">
@@ -70,35 +69,41 @@
                         <div class="row">
 
                             <div class="hero__title">
-                                <div class="hero__circle">
-                                     <div class="circle">
-                                        <svg viewBox="0 0 500 500">  
-                                            <defs>
-                                              <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" transform="rotate(1,150,250)" />
-                                            </defs>
-                                            <g class="textcircle">
-                                              <text>
-                                                <textPath xlink:href="#textcircle" lengthAdjust="spacingAndGlyphs">
-                                                  Web Development || UI/UX Design || Photography ||
-                                                </textPath>
-                                              </text>
-                                            </g>
-                                          </svg>
-                                          
-                                        </div>
-                                    </div>
+                                
                                     <h4>Gabriel Costa Soares</h4>
-                                    <h1>Frontend Developer, Designer and Photographer</h1>
+                                    <h1>Webentwickler und Webdesigner</h1>
                             </div>
+                            
 
                             <div class="hero__caption">
                                 <div class="hero__introduction">
-                                    <p>Creating beautiful websites and web applications with a whole lot of heart, focusing on making designs that feel just right for every user</p>
+                                    <p>Ich biete ganzheitliche Webentwicklungs-Lösungen – von responsivem Frontend und performanten Backends bis hin zu SEO- und Performance-Optimierung – um Ihre Online-Präsenz zu stärken, Nutzererlebnisse zu verbessern und Ihnen nachhaltige Wettbewerbsvorteile zu verschaffen.
+</p>
                                 </div>
                                 <div class="button-row no-margin">
-                                    <a href="#contact"><div class="button">> Contact</div></a>
+                                    <a href="#contact"><div class="button">> Kontakt</div></a>
                                 </div>
                             </div>
+
+                            <div class="hero__circle">
+                                     <div class="circle">
+                                        <div id="circle">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                                                    <defs>
+                                                        <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+                                                    </defs>
+                                                    <circle cx="150" cy="100" r="75" fill="none"/>
+                                                    <g>
+                                                        <use xlink:href="#circlePath" fill="none"/>
+                                                        <text fill="#000">
+                                                            <textPath xlink:href="#circlePath">TypeScript - Express.js - React - PHP - SQL - REST API - Vue - </textPath>
+                                                        </text>
+                                                    </g>
+                                                </svg>
+                                                </div>
+                                          
+                                        </div>
+                                    </div>
 
 
                         </div>
@@ -144,18 +149,43 @@
                     <div class="case-study__background">
                     </div>
                     <div class="case-study__image">
+                        <img src="./assets/anett.jpg" alt="">
+                    </div>
+                </div>
+                    <div class="case-study-text">
+                        <h5>Anett Steller</h5>
+                        <h3>Webseite für Dozentin Anett Steller</h3>
+                        <p>Die Construtora Vila Velha ist eine Unternehmenswebsite. Die Seite wurde entwickelt, um die Projekte, Dienstleistungen und Expertise des Bauunternehmens in Vila Velha, Brasilien, zu präsentieren. Sie besticht durch ein modernes Design, intuitive Navigation und optimierte Performance, um potenziellen Kunden alle wichtigen Informationen über die Arbeit des Unternehmens zu bieten.</p>
+                        <div class="button-row no-margin">
+                            <a href="https://anett-steller.de/"><div class="button">> Zur Website</div></a>
+                        </div>
+                    </div>
+
+            </div>
+            <!-- nach jedem .case-study__background … -->
+                <div class="case-separator"></div>
+
+                 <div class="case-study">
+                <div class="case-study__block">
+                    <div class="case-study__background">
+                    </div>
+                    <div class="case-study__image">
                         <img src="./assets/ConstrutoraVilaVelha.jpg" alt="">
                     </div>
                 </div>
-                <div class="case-study-text">
-                    <h5>Construtora Vila Velha</h5>
-                    <h3>Construction Company</h3>
-                    <p>Construtora Vila Velha is a corporate website built using WordPress with the GeneratePress theme, ensuring a fast and responsive user experience. The site was developed to showcase the construction company's projects, services, and expertise in Vila Velha, Brazil. It features a modern design, intuitive navigation, and optimized performance to provide potential clients with essential information about the company's work.</p>
-                    <div class="button-row no-margin">
-                        <a href="https://construtoravilavelha.space/"><div class="button">> To Website</div></a>
+                    <div class="case-study-text">
+                        <h5>Construtora Vila Velha</h5>
+                        <h3>Bauunternehmen</h3>
+                        <p>Die Construtora Vila Velha ist eine Unternehmenswebsite. Die Seite wurde entwickelt, um die Projekte, Dienstleistungen und Expertise des Bauunternehmens in Vila Velha, Brasilien, zu präsentieren. Sie besticht durch ein modernes Design, intuitive Navigation und optimierte Performance, um potenziellen Kunden alle wichtigen Informationen über die Arbeit des Unternehmens zu bieten.</p>
+                        <div class="button-row no-margin">
+                            <a href="https://construtoravilavelha.space/"><div class="button">> Zur Website</div></a>
+                        </div>
                     </div>
-                </div>
+
             </div>
+            <!-- nach jedem .case-study__background … -->
+                <div class="case-separator"></div>
+
             <div class="case-study">
                 <div class="case-study__block">
                     <div class="case-study__background">
@@ -164,15 +194,21 @@
                         <img src="./assets/cariacica.jpg" alt="">
                     </div>
                 </div>
-                <div class="case-study-text">
-                    <h5>Cariacica Viagens</h5>
-                    <h3>Travel Agency</h3>
-                    <p>The website of Travel Agent Cariacica Viagens was developed using JavaScript along with WordPress, ensuring a dynamic and seamless user experience. Designed with fluidity in mind, the site offers an immersive and intuitive navigation, reflecting the essence of smooth and effortless exploration.</p>
-                    <div class="button-row no-margin">
-                        <a href="https://cariacicaviagens.online"><div class="button">> To Website</div></a>
+                    <div class="case-study-text">
+                        <h5>Cariacica Viagens</h5>
+                        <h3>Reisebüro</h3>
+                        <p>Die Website des Reisebüros Cariacica Viagens wurde mit JavaScript und WordPress entwickelt und bietet ein dynamisches sowie nahtloses Nutzererlebnis. Mit fließendem Design konzipiert, ermöglicht die Seite eine immersive und intuitive Navigation, die das Gefühl einer reibungslosen und mühelosen Entdeckung widerspiegelt.</p>
+                        <div class="button-row no-margin">
+                            <a href="https://cariacicaviagens.online"><div class="button">> Zur Website</div></a>
+                        </div>
                     </div>
-                </div>
+
+
             </div>
+
+            <!-- nach jedem .case-study__background … -->
+<div class="case-separator"></div>
+
             <div class="case-study">
                 <div class="case-study__block">
                     <div class="case-study__background">
@@ -181,15 +217,20 @@
                         <img src="./assets/csrock.jpg" alt="">
                     </div>
                 </div>
-                <div class="case-study-text">
-                    <h5>CS Rock</h5>
-                    <h3>Events</h3>
-                    <p>CS-Rock is an event portal built using WordPress ACF (Advanced Custom Fields) for event management, along with PHP programming. This website was designed to manage and showcase events taking place in Vila Velha, Brazil.</p>
-                    <div class="button-row no-margin">
-                        <a href="https://cs-rock.com/"><div class="button">> To Website</div></a>
+                    <div class="case-study-text">
+                        <h5>CS Rock</h5>
+                        <h3>Veranstaltungen</h3>
+                        <p>CS Rock ist ein Event-Portal, das mit WordPress ACF (Advanced Custom Fields) zur Verwaltung von Veranstaltungen und PHP-Programmierung erstellt wurde. Die Website wurde entwickelt, um Events in Vila Velha, Brasilien, zu organisieren und zu präsentieren.</p>
+                        <div class="button-row no-margin">
+                            <a href="https://cs-rock.com/"><div class="button">> Zur Website</div></a>
+                        </div>
                     </div>
-                </div>
+
             </div>
+
+            <!-- nach jedem .case-study__background … -->
+<div class="case-separator"></div>
+
             <div class="case-study">
                 <div class="case-study__block">
                     <div class="case-study__background">
@@ -199,14 +240,19 @@
                     </div>
                 </div>
                 <div class="case-study-text">
-                    <h5>Photography Website</h5>
-                    <h3>My own website as photographer</h3>
-                    <p>Immersing myself in the creative process, I've envisioned a website that exudes the essence of my photographic journey—a dynamic, horizontal layout meticulously crafted to evoke a sense of fluidity and seamless exploration.</p>
+                    <h5>Fotografie-Website</h5>
+                    <h3>Meine eigene Website als Fotograf</h3>
+                    <p>Indem ich mich in den kreativen Prozess vertiefe, habe ich eine Website entworfen, die die Essenz meiner fotografischen Reise ausstrahlt – ein dynamisches, horizontales Layout, das mit akribischer Sorgfalt gestaltet wurde, um ein Gefühl von Fluss und nahtloser Erkundung zu vermitteln.</p>
                     <div class="button-row no-margin">
-                        <a href="https://gcostasoares.github.io/photography_website/"><div class="button">> To Website</div></a>
+                        <a href="https://gcostasoares.github.io/photography_website/"><div class="button">> Zur Website</div></a>
                     </div>
                 </div>
+
             </div>
+
+            <!-- nach jedem .case-study__background … -->
+<div class="case-separator"></div>
+
             <div class="case-study">
                 <div class="case-study__block">
                     <div class="case-study__background">
@@ -216,14 +262,19 @@
                     </div>
                 </div>
                 <div class="case-study-text">
-                    <h5>Vanessa Gunia Website</h5>
-                    <h3>Website for Systemic Coach Vanessa Gunia</h3>
-                    <p>Vanessa Gunia offers a unique approach to coaching that delves deep into systemic dynamics to unlock your full potential and facilitate meaningful change.</p>
+                    <h5>Vanessa Gunia-Website</h5>
+                    <h3>Webseite für systemischen Coach Vanessa Gunia</h3>
+                    <p>Vanessa Gunia bietet einen einzigartigen Coaching-Ansatz, der tief in systemische Dynamiken eintaucht, um Ihr volles Potenzial freizusetzen und nachhaltige Veränderungen zu ermöglichen.</p>
                     <div class="button-row no-margin">
-                        <a href="https://www.vanessagunia.com/"><div class="button">> To Website</div></a>
+                        <a href="https://www.vanessagunia.com/"><div class="button">> Zur Website</div></a>
                     </div>
                 </div>
+
             </div>
+
+            <!-- nach jedem .case-study__background … -->
+<div class="case-separator"></div>
+
         </div>
     </div>
 </article>
@@ -246,7 +297,7 @@
                                     </div>
                                     <div class="about-me__text">
                                         <h3>That's me</h3>
-                                        <p>My name is Gabriel Costa Soares, a passionate and skilled web developer with extensive experience in Vue.js, PHP, Python, and WordPress development. Throughout my career, I’ve honed my ability to create dynamic, user-friendly websites that cater to the specific needs of clients, blending both front-end and back-end technologies seamlessly. I have a solid background in Vue.js and WordPress, which I use for building interactive and real-time web applications, as well as PHP for server-side scripting and automation tasks. My approach combines technical proficiency with a strong focus on user experience, allowing me to deliver high-performance websites that are visually appealing and highly functional.</p>
+                                        <p>Mein Name ist Gabriel Costa Soares. Ich bin ein leidenschaftlicher und versierter Webentwickler mit umfangreicher Erfahrung in React.js, PHP, SQL, Express.js und der WordPress-Entwicklung. Im Laufe meiner Karriere habe ich meine Fähigkeit perfektioniert, dynamische, benutzerfreundliche Websites zu erstellen, die genau auf die Bedürfnisse meiner Kunden zugeschnitten sind und Front- und Backend nahtlos miteinander verbinden. Mein fundierter Hintergrund in Vue.js und WordPress ermöglicht es mir, interaktive und Echtzeit-Webanwendungen zu realisieren, während ich PHP für serverseitiges Scripting und Automatisierungsaufgaben einsetze. Mein Ansatz vereint technische Expertise mit einem starken Fokus auf User Experience, sodass ich leistungsstarke Websites liefere, die sowohl optisch ansprechend als auch hochfunktional sind.</p>
                                     </div>
                                 </div>
 
@@ -279,26 +330,26 @@
 
                                 
                                         <div class="form-control">  
-                                            <label id="username_label" for="username">Your name</label>
-                                            <input type="text" placeholder="your name" id="username">
+                                            <label id="username_label" for="username">Dein Name</label>
+                                            <input type="text" placeholder="dein Name" id="username">
                                             <small>Error message</small>
                                         </div>
                                 
                                         <div class="form-control">
-                                            <label id="email_label"  for="username">Your e-mail</label>
-                                            <input type="email" placeholder="your e-mail" id="email">
+                                            <label id="email_label"  for="username">Deine E-mail-Adresse</label>
+                                            <input type="email" placeholder="deine E-mail-Adresse" id="email">
                                             <small>Error message</small>
                                         </div>
                                 
                                         <div class="message">
-                                            <label>And your message</label>
-                                            <textarea type="text" placeholder= "your message"></textarea>
+                                            <label>Und deine Nachricht</label>
+                                            <textarea type="text" placeholder= "deine Nachricht"></textarea>
                                         </div>
                                         
                                         
                                         <div class="sender">
                                         <button type="submit">
-                                            <p>Send</p>
+                                            <p>Senden</p>
                                             </button>
                                         </div>
                                 
