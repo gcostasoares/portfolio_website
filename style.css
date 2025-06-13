@@ -187,6 +187,12 @@ p {
   transform-origin:top left; 
 }
 
+@media (max-width: 550px) {
+  #circle {
+    transform: scale(0.8);
+  }
+}
+
 #circle text { 
   font-family: "Playfair Display", serif;
   font-size: 13px; 
