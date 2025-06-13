@@ -288,7 +288,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('/portfolio_website/assets/binarycode.jpg') center/cover no-repeat;
+  background: url('https://costasoares-website/portfolio_website/assets/binarycode.jpg') center/cover no-repeat;
   z-index: 0;
   filter: brightness(var(--brightness)) opacity(50%);
 }
@@ -993,6 +993,12 @@ button:hover {
   color: #E4E6C3;
   border: 1px solid transparent;
 }/*# sourceMappingURL=style.css.map */
+
+.impressum_link a,
+.datenschutz_link a{
+  text-decoration: none;
+  color: white;
+}
 
 .impressum {
   /* übernimmt die Center-Logik deiner .app/.wrapper */
