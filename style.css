@@ -288,7 +288,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('https://costasoares-website/portfolio_website/assets/binarycode.jpg') center/cover no-repeat;
+  background: url('https://costasoares-website.com/portfolio_website/assets/binarycode.jpg') center/cover no-repeat;
   z-index: 0;
   filter: brightness(var(--brightness)) opacity(50%);
 }
